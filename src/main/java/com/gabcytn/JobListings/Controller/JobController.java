@@ -9,4 +9,9 @@ public class JobController {
     public String getHome () {
         return "views/index.jsp";
     }
+
+    @GetMapping("/add-job")
+    public String getAddJob () {
+        return "views/add-job";
+    }
 }
