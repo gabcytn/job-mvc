@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class JobController {
     @GetMapping({"/", "/home"})
     public String getHome () {
-        System.out.println("hello");
-        return "index";
+        return "views/index.jsp";
     }
 }
