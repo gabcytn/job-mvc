@@ -12,7 +12,7 @@
 <body>
     <div class="container my-3">
         <h2 class="text-center">Job Listing</h2>
-        <form action="/add-job" method="get">
+        <form action="/add-job" method="post">
             <label for="id" class="form-label">ID</label>
             <input type="number"  name="id" id="id" class="form-control"required>
             <label for="title" class="form-label">Title</label>
@@ -36,7 +36,7 @@
                 <option value="Express">Express</option>
             </select>
 
-            <button class="btn btn-primary mt-3">Submit</button>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
 </body>
