@@ -23,7 +23,7 @@
             <label for="experience" class="form-label">Years of Experience</label>
             <input type="number"  name="experience" id="experience" class="form-control"required>
 
-            <select name="tech-stack" id="tech-stack" class="form-select mt-3" multiple required>
+            <select name="techStack" id="tech-stack" class="form-select mt-3" multiple required>
                 <option value="JavaScript">JavaScript</option>
                 <option value="TypeScript">TypeScript</option>
                 <option value="Java">Java</option>
