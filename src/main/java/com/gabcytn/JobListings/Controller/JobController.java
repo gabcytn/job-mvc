@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class JobController {
     @GetMapping({"/", "/home"})
     public String getHome () {
-        return "views/index.jsp";
+        return "index";
     }
 
     @GetMapping("/add-job")
     public String getAddJob () {
-        return "views/add-job";
+        return "add-job";
     }
 }
