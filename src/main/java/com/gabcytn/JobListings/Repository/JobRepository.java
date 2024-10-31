@@ -20,7 +20,12 @@ public class JobRepository {
     JdbcTemplate jdbcTemplate;
 
     public void save (Job job) {
-        // TODO (insert job to database)
+        final String sqlQuery = "INSERT INTO job VALUES (?, ?, ?, ?, ?)";
+        List<String> techStackList = job.getTechStack();
+        String[] techStackArray = techStackList.toArray(new String[0]);
+
+        jdbcTemplate.update(sqlQuery, job.getId(), job.getTitle(), job.getDescription(), job.getExperience(), job.getTechStack().toArray(new String[job.getTechStack().size()]));
+
     }
 
     public List<Job> findAll () {
