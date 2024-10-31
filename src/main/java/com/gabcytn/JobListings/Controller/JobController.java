@@ -39,6 +39,7 @@ public class JobController {
 
     @PostMapping("/add-job")
     public ModelAndView postAddJob (Job job, ModelAndView modelAndView) {
+        jobService.addJob(job);
         modelAndView.addObject("job", job);
         modelAndView.setViewName("post-job");
 
