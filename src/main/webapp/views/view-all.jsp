@@ -1,4 +1,5 @@
 <%@page language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,21 +35,24 @@
     </div>
     <div class="container mt-2">
       <div class="row g-2">
-        <div class="col-6">
-          <div class="box bg-secondary-subtle p-3">
-            <h3>101</h3>
-            <p><strong>Job Title</strong>: React</p>
-            <p><strong>Job Description</strong>: Senior React Role</p>
-            <p><strong>Years of Experience</strong>: 3</p>
-            <strong>Tech Stack:</strong>
-            <ul>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React</li>
-            </ul>
-          </div>
-        </div>
+        <c:forEach var="job" items="${jobs}">
+            <div class="col-6" style="min-height: 275px !important;">
+              <div class="box bg-secondary-subtle p-3">
+                <h3>${job.id}</h3>
+                <p><strong>Job Title</strong>: ${job.title}</p>
+                <p><strong>Job Description</strong>: ${job.description}</p>
+                <p><strong>Years of Experience</strong>: ${job.experience}</p>
+                <strong>Tech Stack:</strong>
+                <ul>
+                  <c:forEach var="tech" items="${job.techStack}">
+                    <li>${tech}</li>
+                  </c:forEach>
+                </ul>
+              </div>
+            </div>
+        </c:forEach>
       </div>
+      <a href="/home" class="btn btn-warning my-2">Home<a>
     </div>
   </body>
 </html>
