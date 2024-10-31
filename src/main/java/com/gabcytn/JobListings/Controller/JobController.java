@@ -15,8 +15,16 @@ import java.util.List;
 @Lazy
 public class JobController {
 
+    private JobService jobService;
+
+    public JobService getJobService() {
+        return jobService;
+    }
+
     @Autowired
-    JobService jobService;
+    public void setJobService(JobService jobService) {
+        this.jobService = jobService;
+    }
 
     @GetMapping({"/", "/home"})
     public String getHome () {
