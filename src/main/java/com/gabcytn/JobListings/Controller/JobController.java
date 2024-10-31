@@ -14,4 +14,9 @@ public class JobController {
     public String getAddJob () {
         return "add-job";
     }
+
+    @GetMapping("/view-jobs")
+    public String getViewJobs (){
+        return "view-all";
+    }
 }
