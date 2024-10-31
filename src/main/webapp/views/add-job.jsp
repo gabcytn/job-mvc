@@ -36,6 +36,7 @@
                 <option value="Express">Express</option>
             </select>
 
+            <a href="/home" class="btn btn-warning mt-3">Back</a>
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
